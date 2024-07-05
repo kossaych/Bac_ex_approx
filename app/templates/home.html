@@ -1,0 +1,249 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(73, 73, 73);
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        
+        .left-panel {
+            flex: 1;
+        }
+        
+        .right-panel {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+        }
+        
+        .code-section {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .copy-btn-top {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            background-color: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .copy-btn-top:hover {
+            background-color: #333;
+        }
+        
+        pre code {
+            display: block;
+            overflow-x: auto;
+            background-color: rgba(0, 0, 0, 0.918);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-top: 40px; /* Adjusted margin for spacing */
+        }
+        
+        .input-section {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-section input {
+            flex: 1;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .input-section button {
+            padding: 10px 20px;
+            background-color: #009;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            transition: background-color 0.3s ease;
+        }
+        
+        .input-section button.copy-btn {
+            background-color: #555;
+            margin-left: 10px;
+        }
+        
+        .input-section button:hover, .input-section button.copy-btn:hover {
+            background-color: #007;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th.header {
+            background-color: #009;
+            color: white;
+        }
+        
+        .nthroot {
+            font-size: 75%;
+            display: inline-block;
+            margin-left: -0.5em;
+            transform: translateX(0.8em) translateY(-1em);
+        }
+        
+        .overline {
+            border-top: .11rem solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="left-panel">
+            <h1>My Solution:</h1>
+            <div class="code-section">
+                <button class="copy-btn-top" onclick="copyCode()">Copy the code</button>
+                <pre>
+                    <code>
+    def estpremier(x) :
+        i = 2
+        test = True
+        while(test == True and i<= x//2) :
+            if x%2 == 0 :
+                test = False
+            i = i + 1
+        return test
+    def premier_suivant(n): 
+        n += 1
+        while not estpremier(n):
+            n += 1
+        return n
+    def Facteur(M) : 
+        ch = ""
+        while M > 1:
+            i = 2
+            while M % i != 0:
+                i = premier_suivant(i)
+            ch = ch  + str(i)
+            M = M // i
+        max = int(ch[0])
+        for i in range (0,len(ch)) :
+            if int(ch[i]) > max :
+                max = int(ch[i])
+        return max
+    def suitex(M,n,k) :
+        if k == 0 :
+            return M/2
+        else :
+            Tp = suitex(M,n,k-1)
+            return (1 / n) * ((n - 1) * Tp + (M / (Tp ** (n - 1)))) 
+    def suitex0(M, n, k):
+        if k == 0:
+            return M / 2.0   
+        else:
+            Tp = suitex(M, n, k - 1)
+            return (1 / n) * ((n - 1) * Tp + (M / (Tp ** (n - 1)))) 
+    def RacineN(M,n) :
+        Tp = suitex(M,n,1)
+        T = suitex(M,n,2)
+        k = 2
+        while(abs(Tp - T) > 0.0000000000000000000000000001) :
+            Tp = T
+            k = k + 1
+            T = suitex(M,n,k)  
+        return T
+    def NRound(M) :
+        n = 2
+        p = Facteur(M)
+        while(p < RacineN(M,n) ) : 
+            n = n+1
+        return n - 1
+         
+                    </code>
+                </pre> 
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="code-section">
+                <h1>Results:</h1>
+                <div class="input-section">
+                    NRound (<input type="text" id="M" value="{{M}}"  placeholder="Enter value for M">)
+                    <button class="run-btn" onclick="redirect()">Run</button> 
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="header">n</th>
+                        <th class="header">Racine n ième</th>
+                        <th class="header">Constatation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for res in results %}
+                        <tr>
+                            <td>{{res.n}}</td>
+                            <td>
+                                <span class="nthroot">{{res.n}}</span><span style="font-size:120%;">√</span><span class="overline">{{M}}</span> = {{res.racine}}
+                            </td>
+                            <td>
+                                {{res.n}} {{res.mark}} <span class="nthroot">{{res.n}}</span><span style="font-size:120%;">√</span><span class="overline">{{M}}</span>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function redirect() {
+            var M = document.getElementById('M').value;
+            window.location = '/' + M;
+        }
+
+        function copyCode() {
+            var codeElement = document.querySelector('pre code');
+            var textarea = document.createElement('textarea');
+            textarea.value = codeElement.textContent;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Code copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
