@@ -1,20 +1,14 @@
  
+    
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: rgb(73, 73, 73);
-            font-family: Arial, sans-serif;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .flex-container {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language Switcher</title>
+<style>
+          .flex-container {
             display: flex;
             justify-content: space-around;
             padding: 20px;
@@ -128,9 +122,76 @@
         .overline {
             border-top: .11rem solid;
         }
-    </style>
+        .parag{ 
+            padding: 20px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-top: 40px; /* Adjusted margin for spacing */
+        }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .buttons button:hover {
+    background: #0056b3;
+  }
+  .text {
+    display: none;
+  }
+  .text.active {
+    display: block;
+  }
+</style>
 </head>
 <body>
+
+    <div class="container">
+        <div class="buttons">
+          <button onclick="showText('arabic')">Arabic</button>
+          <button onclick="showText('french')">French</button>
+          <button onclick="showText('english')">English</button>
+        </div>
+        <div id="arabic" class="text">
+          <p>أثناء اختبار خوارزميات  واجهت مشكلة في تقييم  التمرين 4 (مشكلة  تصحيح)  . تطلبت هذه المهمة تطوير طريقة لتقدير الجذر   لعدد ما، والتي تتضمن عمليات حسابية معقدة (أكثر من 1000 خطوة) ومن المستحيل على المصحح التحقق من صحة الطريقة إذا كان الحل المقدم مختلفًا عن الحل الرسمي.</p>
+          <p>واقترحت حلا مختلفا عن التصحيح الرسمي. لقد نجح الحل الذي توصلت إليه بشكل جيد عندما اختبرته باستخدام بايثون وتم تأكيد فعاليته بواسطة معلمي في المدرسة الثانوية. لقد نجح في تقريب الجذر  </p>
+          <p>ومع ذلك، أثناء عملية التصحيح، حدث سوء فهم. تم تقييم التمرين يدويًا، وهو غير مناسب لمثل هذه المهام المعقدة (أكثر من 1000 خطوة). أخبرني أستاذي أنه في امتحانات البكالوريا، بالنسبة لتمارين التقريب مثل هذه، لا يتحقق المصححون بشكل صارم من كل خطوة ولا يتحققون من النتائج النهائية لأنهم لا يستطيعون حسابها يدويًا، فهم بحاجة إلى جهاز كمبيوتر. وبدلاً من ذلك، يركز التقييم على النهج والمنطق بسبب التعقيد الذي ينطوي عليه الأمر. قد يكون هذا النهج غير عادل للطلاب المبدعين وغير التقليديين مثلي لأن الحل الذي قدمته كان مختلفًا.</p>
+        </div>
+        <div id="french" class="text">
+          <p>Pendant l'examen d'algorithmes du BAC, j'ai rencontré un problème de notation dans l'exercice 4 (problème d'approximation), qui consistait spécifiquement à estimer la racine n-ième. Cette tâche nécessitait le développement d'une méthode pour estimer la racine n-ième d'un nombre, ce qui impliquait des calculs complexes (plus de 1000 étapes) et il était impossible pour le correcteur de vérifier la validité de la méthode si la solution proposée était différente de la solution officielle.</p>
+          <p>J'ai proposé une solution différente de celle prévue par le corrigé officiel. La solution que j'ai proposée a bien fonctionné lorsque je l'ai testée en utilisant Python et son efficacité a été confirmée par mon professeur de lycée. Elle a réussi à estimer la racine n.</p>
+          <p>Cependant, lors du processus de correction, il y a eu un malentendu. L'exercice a été évalué manuellement, ce qui est inapproprié pour des tâches aussi complexes (plus de 1000 étapes). Mon professeur m'a expliqué que, dans les examens du BAC, pour des exercices d'approximation comme celui-ci, les correcteurs ne vérifient pas strictement chaque étape ni les résultats finaux car ils ne peuvent pas les calculer manuellement ; ils ont besoin d'un ordinateur. Au lieu de cela, l'évaluation se concentre sur l'approche et la logique en raison de la complexité impliquée. Cette approche peut être injuste pour les étudiants créatifs et non conventionnels comme moi, car la solution que j'ai proposée était différente.</p>
+        </div>
+        <div id="english" class="text">
+          <p>During the BAC algorithms exam, I encountered a grading issue in exercise 4 (approximation problem), which specifically involved estimating the nth root. This task required developing a method to estimate the nth root of a number, involving complex calculations (over 1000 steps), making it impossible for the grader to verify the method's validity if the proposed solution differed from the official one.</p>
+          <p>I proposed a different solution than the one in the official correction. My solution worked well when I tested it using Python, and its effectiveness was confirmed by my high school teacher. It succeeded in estimating the nth root.</p>
+          <p>However, during the grading process, there was a misunderstanding. The exercise was graded manually, which is unsuitable for such complex tasks (over 1000 steps). My teacher explained that, in BAC exams, for approximation exercises like this, graders do not strictly check each step or the final results because they cannot compute them manually; they need a computer. Instead, the evaluation focuses on the approach and logic due to the complexity involved. This approach can be unfair to creative and unconventional students like me because my proposed solution was different.</p>
+        </div>
+      </div>
+ 
     <div class="flex-container">
         <div class="left-panel">
             <h1>My Solution:</h1>
@@ -170,12 +231,7 @@
         else :
             Tp = suitex(M,n,k-1)
             return (1 / n) * ((n - 1) * Tp + (M / (Tp ** (n - 1)))) 
-    def suitex0(M, n, k):
-        if k == 0:
-            return M / 2.0   
-        else:
-            Tp = suitex(M, n, k - 1)
-            return (1 / n) * ((n - 1) * Tp + (M / (Tp ** (n - 1)))) 
+      
     def RacineN(M,n) :
         Tp = suitex(M,n,1)
         T = suitex(M,n,2)
@@ -228,8 +284,29 @@
             </table>
         </div>
     </div>
-    <script>
-        function redirect() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    
+    function redirect() {
             var M = document.getElementById('M').value;
             window.location = '/' + M;
         }
@@ -244,6 +321,15 @@
             document.body.removeChild(textarea);
             alert('Code copied to clipboard!');
         }
-    </script>
+    
+  function showText(language) {
+    var texts = document.querySelectorAll('.text');
+    texts.forEach(function(text) {
+      text.classList.remove('active');
+    });
+    document.getElementById(language).classList.add('active');
+  }
+</script>
+
 </body>
 </html>
