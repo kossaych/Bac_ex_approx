@@ -177,35 +177,34 @@
 
     </h1>
     <div class="container">
-        <h1>explication : </h1>
+        <h1>Explication :</h1>
         <div class="buttons">
-          <button onclick="showText('arabic')">Arabic</button>
-          <button onclick="showText('french')">French</button>
-          <button onclick="showText('english')">English</button>
+            <button onclick="showText('arabic')">Arabic</button>
+            <button onclick="showText('french')">French</button>
+            <button onclick="showText('english')">English</button>
         </div>
-        <div id="arabic" class="text" style="font-size: 20;">
+        <div id="arabic" class="text active" style="text-align:right; font-size: 20px;">
             تم تقييم التمرين 4 في امتحان الخورزميات الخاص بي بالشكل الخاطئ . تطلبت هذه المهمة تطوير طريقة لتقدير الجذر  لعدد ما، والتي تتضمن عمليات حسابية معقدة (أكثر من 1000 خطوة) ومن المستحيل على المصحح التحقق من صحة الطريقة إذا كان الحل المقدم مختلفًا عن الحل الرسمي.
-
+    
             و اقترحت حلا مختلفا عن التصحيح الرسمي. لقد نجح الحل الذي توصلت إليه بشكل جيد عندما اختبرته باستخدام بايثون وتم تأكيد فعاليته بواسطة   أستاذي . لقد نجح في تقريب الجذر 
-
+    
             ومع ذلك، أثناء عملية التصحيح ، حدث سوء فهم. تم تقييم التمرين يدويًا، وذلك غير مناسب لمثل هذه المهام المعقدة (أكثر من 1000 خطوة). أخبرني أستاذي أنه في امتحانات البكالوريا، بالنسبة لتمارين   مثل هذه، لا يتحقق المصححون بشكل صارم من كل خطوة كما انهم لا يتحققون من النتائج النهائية لأنهم لا يستطيعون حسابها يدويًا، فهم بحاجة إلى جهاز كمبيوترولذالك و بالرغم من تطابق النتائج التي يصل اليها حلي مع النتائج في الاصلاح انا متاكد انني لم احصل على علامة كاملة في ذالك التمرين بسبب اختلاف طريقة الحل . قد يكون هذا النهج في الاصلاح غير عادل للطلاب المبدعين وغير التقليديين مثلي لأن الحل الذي قدمته كان مختلفًا .
-            لو تم اعتماد طريقة اخرى في الاصلاح لكان افضل كأن يتم برمجة test لالتثبت من فعالية الخورزمية مع جميع test cases
+                لو تم اعتماد طريقة اخرى في الاصلاح لكان افضل كأن يتم برمجة <bdi>test </bdi>لالتثبت من فعالية الخورزمية مع جميع <bdi> test cases</bdi>
         </div>
-        <div id="french" class="text">
-            L'exercice 4 de mon examen d'algorithmes a été mal noté. Cette tâche a nécessité le développement d'une méthode d'estimation de la racine n d'un nombre, ce qui implique des opérations arithmétiques complexes (plus de 1000 étapes) et il est impossible pour le correcteur de valider la méthode si la solution apportée est différente de la solution officielle. .
-
-            J'ai proposé une solution différente du patch officiel. La solution que j'ai proposée a bien fonctionné lorsque je l'ai testée avec Python et son efficacité a été confirmée par mon professeur. Il a réussi à arrondir la racine n
-            
-            Cependant, lors du processus de débogage, un malentendu s'est produit. L'exercice a été évalué manuellement, ce qui n'est pas adapté à des tâches aussi complexes (>1000 étapes). Mon professeur m'a dit que lors des examens du baccalauréat, pour les exercices d'approximation comme celui-ci, les correcteurs ne vérifient pas strictement chaque étape et ne vérifient pas les résultats finaux car ils ne peuvent pas les calculer manuellement, ils ont besoin d'un ordinateur, donc même si les résultats sont mes Les élèves obtiennent des résultats identiques. Avec les résultats de la réparation, je suis certain de ne pas avoir obtenu la note maximale dans cet exercice en raison de la différence dans la méthode de résolution. Cette approche de réforme peut être injuste pour les étudiants créatifs et non traditionnels comme moi, car la solution que j'ai présentée était différente.
-            Si une autre méthode de réparation avait été adoptée, elle aurait été meilleure, comme programmer un test pour vérifier l'efficacité de l'algorithme avec tous les cas de test.</div>
-        <div id="english" class="text">
-            Exercise 4 on my algorithms exam was graded incorrectly. This task required the development of a method to estimate the n-root of a number, which involves complex arithmetic operations (more than 1000 steps) and it is impossible for the corrector to validate the method if the solution provided is different from the official solution.
-
-            I proposed a solution different from the official patch. The solution I came up with worked well when I tested it using Python and its effectiveness was confirmed by my professor. He succeeded in rounding the root n
-            
-            However, during the debugging process, a misunderstanding occurred. The exercise was evaluated manually, which is not suitable for such complex tasks (>1000 steps). My teacher told me that in baccalaureate exams, for approximation exercises like this, the graders do not strictly check every step and they do not check the final results because they cannot calculate them by hand, they need a computer, so even though the results my students arrive at are identical With the results in the repair, I am certain that I did not get a full mark in that exercise because of the difference in the solution method. This approach to reform may be unfair to creative and non-traditional students like me because the solution I presented was different.
-            If another method of repair had been adopted, it would have been better, such as programming a test to verify the effectiveness of the algorithm with all test cases.</div>
-      </div>
+        <div id="french" class="text" style="font-size: 20px ">
+            L'exercice 4 de mon examen d'algorithmes a été incorrectement évalué. Cette tâche consistait à développer une méthode pour estimer la racine d'un nombre, impliquant des opérations arithmétiques complexes (plus de 1000 étapes), ce qui rendait impossible pour le correcteur de vérifier l'exactitude de la méthode si la solution proposée était différente de celle officielle.
+            J'ai proposé une solution différente de la correction officielle. Mon approche a bien fonctionné lors de mes tests avec Python et a été validée par mon professeur. Elle a réussi à approximer correctement la racine.
+            Cependant, il y a eu un malentendu lors de la correction. L'exercice a été évalué manuellement, ce qui n'est pas adapté pour des tâches aussi complexes (plus de 1000 étapes). Mon professeur m'a expliqué que lors des examens du baccalauréat, pour des exercices comme celui-ci, les correcteurs ne vérifient pas rigoureusement chaque étape en raison de la difficulté de les calculer manuellement, nécessitant l'utilisation d'un ordinateur. Malgré que mes résultats concordaient avec ceux de la correction, je suis convaincu de ne pas avoir reçu une note complète en raison de la différence dans l'approche de la solution. Ce mode d'évaluation peut être injuste pour les étudiants créatifs et non conventionnels comme moi en raison de la différence dans l'approche de la solution.
+            Une autre approche dans l'évaluation aurait été préférable, comme la programmation d'un test pour vérifier l'efficacité de l'algorithme avec tous les cas de test.
+        </div>
+        <div id="english" class="text" style="font-size: 20px ">
+            Exercise 4 in my algorithms exam was incorrectly evaluated. This task required developing a method to approximate the square root of a number, involving complex arithmetic operations (over 1000 steps), making it impossible for the examiner to verify the accuracy of the method if the proposed solution was different from the official one.
+            I proposed a different solution from the official correction. My approach performed well when tested using Python and was validated by my teacher. It successfully approximated the square root accurately.
+            However, there was a misunderstanding during the grading process. The exercise was manually graded, which is not suitable for such complex tasks (over 1000 steps). My teacher informed me that in BAC exams, for exercises like this, examiners do not rigorously check each step due to the difficulty of manually calculating them, requiring the use of a computer. Despite my solution matching the results in the grading, I am confident that I did not receive a full mark due to the difference in solution approach. This grading approach may be unfair to creative and non-traditional students like myself because of the difference in the proposed solution.
+            Another approach in grading would have been preferable, such as programming a test to verify the algorithm's effectiveness with all test cases.
+        </div>
+    </div>
+    
  
     <div class="flex-container">
         <div class="left-panel">
